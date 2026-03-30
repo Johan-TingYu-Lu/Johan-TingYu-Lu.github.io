@@ -3,47 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Johan Lu - Technical Portfolio</title>
+    <title>Ting-Yu (Johan) Lu | Engineering Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 2rem; color: #333; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
-        h2 { color: #34495e; margin-top: 2rem; }
-        a { color: #3498db; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .card { background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
-        .contact { background: #eef2f5; padding: 1rem; border-radius: 4px; display: flex; justify-content: space-between; flex-wrap: wrap;}
+        /* Modern Dark Mode & Glassmorphism UI */
+        :root {
+            --bg-dark: #0f172a;
+            --card-glass: rgba(30, 41, 59, 0.7);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0284c7;
+            --success: #10b981;
+            --glass-blur: blur(16px);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: radial-gradient(circle at top right, rgba(56, 189, 248, 0.15), transparent 40%),
+                              radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.1), transparent 40%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        /* Status Badges */
+        .status-bar {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--card-border);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: var(--glass-blur);
+        }
+
+        .badge.visa {
+            color: var(--success);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        /* Portfolio Cards */
+        .grid {
+            display: grid;
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--card-glass);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 30px;
+            text-decoration: none;
+            color: var(--text-main);
+            backdrop-filter: var(--glass-blur);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: var(--accent);
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        .tags {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 0.8rem;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 12px;
+        }
+        
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--card-border);
+            padding-top: 20px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 24px;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: var(--accent-hover);
+        }
     </style>
 </head>
 <body>
+
+<div class="container">
     <h1>Ting-Yu (Johan) Lu</h1>
-    
-    <div class="contact">
-        <span>📍 Relocating to Stockholm (Aug 2026)</span>
-        <span>✅ Work Visa Secured (No sponsorship needed)</span>
-        <span>📧 johansoros@gmail.com</span>
+    <div class="subtitle">Technical Project Manager & R&D Engineer</div>
+
+    <div class="status-bar">
+        <div class="badge">
+            📍 Relocating to Stockholm (Aug 2026)
+        </div>
+        <div class="badge visa">
+            ✅ Full Work Authorization (Spouse Visa, No Sponsorship Required)
+        </div>
+        <div class="badge">
+            ✉️ johansoros@gmail.com
+        </div>
     </div>
 
-    <p>Experienced Technical Project Manager and R&D Engineer specializing in Cleantech, Offshore Engineering, and Mechanical Design. With 14 years of experience and 5 recognized patents, I build innovative, scalable hardware solutions and manage complex cross-functional teams.</p>
+    <p style="font-size: 1.1rem; color: #cbd5e1; max-width: 800px;">
+        14 years of experience as an engineering leader bridging design, prototyping, and high-volume manufacturing. 
+        Holding <strong>5 recognized patents</strong>. Specialized in navigating complex multi-disciplinary hardware systems, 
+        cleantech, and offshore integrations.
+    </p>
 
-    <h2>Portfolio Sections</h2>
-    
-    <div class="card">
-        <h3><a href="01_Patents_and_Inventions.html">1. Patents & Fluid Systems Innovations</a></h3>
-        <p>Details on 5 patents across water treatment, amphibious vehicle suspension, and aerospace UAVs.</p>
+    <div class="grid">
+        <!-- Card 1 -->
+        <a href="01_Patents_and_Inventions.html" class="card">
+            <h2>💡 Patents & Fluid Systems Innovations</h2>
+            <p>End-to-end NPI experience from white-board concepts to patented hardware. Featuring water treatment systems, suspension modules, and fluid dynamics.</p>
+            <div class="tags">
+                <span class="tag">5 Patents</span>
+                <span class="tag">DFM / NPI</span>
+                <span class="tag">Fluid Dynamics</span>
+            </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="02_R&D_and_Engineering.html" class="card">
+            <h2>🌊 Offshore & Prototyping Engineering</h2>
+            <p>Advanced structural FEA for offshore wind components, cross-functional commercial hardware development (CATFI, BISTRO), and marine engineering integrations.</p>
+            <div class="tags">
+                <span class="tag">Offshore Wind</span>
+                <span class="tag">FEA Simulation</span>
+                <span class="tag">Mechanical Design</span>
+            </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="03_STEM_Mentorship.html" class="card">
+            <h2>🚀 STEM Leadership & Systems Engineering Coaching</h2>
+            <p>Guiding high school rocketry teams in complex avionics design and empowering 200+ students through structured Maker education and data-driven analysis methodologies.</p>
+            <div class="tags">
+                <span class="tag">Systems Engineering</span>
+                <span class="tag">Cross-functional Leadership</span>
+                <span class="tag">EdTech</span>
+            </div>
+        </a>
+
+        <!-- Card 4 -->
+        <a href="04_Digital_and_AI_Skills.html" class="card">
+            <h2>💻 AI Tools & Digital Engineering</h2>
+            <p>Leveraging AI-assisted coding, Python automation, and modern full-stack development to accelerate R&D cycles and build complex data analysis systems.</p>
+            <div class="tags">
+                <span class="tag">AI Integration</span>
+                <span class="tag">Python Automation</span>
+                <span class="tag">Full-Stack Dev</span>
+            </div>
+        </a>
     </div>
 
-    <div class="card">
-        <h3><a href="02_R&D_and_Engineering.html">2. Offshore & Prototyping Engineering</a></h3>
-        <p>Offshore wind seafastening FEA models, commercial hardware product development (BISTRO, CATFI), and marine engineering projects.</p>
-    </div>
+    <a href="assets/Johan_Lu_CV.pdf" target="_blank" class="download-btn">📥 Download Full CV (PDF)</a>
 
-    <div class="card">
-        <h3><a href="03_STEM_Mentorship.html">3. STEM Leadership & Systems Engineering Coaching</a></h3>
-        <p>Mentoring high school rocketry teams in complex avionics design (PCB/Teensy) and guiding 200+ students to top-tier universities.</p>
+    <div class="footer">
+        © 2026 Johan Lu. Engineered for the Swedish Tech Industry.
     </div>
-
-    <h2>Download CV</h2>
-    <p>Please connect with me via <a href="#">LinkedIn</a> or email to receive my full 2-page tailored CV.</p>
+</div>
 
 </body>
 </html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patents & Innovations | Johan Lu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --card-glass: rgba(30, 41, 59, 0.7);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0; padding: 0;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .back-link { color: var(--accent); text-decoration: none; display: inline-block; margin-bottom: 20px; font-weight: 600; }
+        .back-link:hover { text-decoration: underline; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; color: #fff; }
+        .section {
+            background: var(--card-glass);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .section h2 { color: var(--accent); margin-top: 0; }
+        .meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; display: flex; gap: 15px; }
+        .meta span { background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; }
+        
+        /* Image Gallery grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+            background: #fff; /* some patent images might be transparent PNGs of black text */
+            padding: 5px;
+            box-sizing: border-box;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover { transform: scale(1.02); }
+        .problem-solution {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+            background: rgba(0,0,0,0.2);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .problem-solution h3 { margin-top: 0; font-size: 1.1rem; color: #cbd5e1; }
+        
+        @media (max-width: 600px) {
+            .problem-solution { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="index.html" class="back-link">← Back to Home</a>
+    <h1>Patents & Fluid Systems Innovations</h1>
+    <p style="color: var(--text-muted); font-size: 1.1rem;">
+        Transforming complex hardware challenges into patented, manufacturable reality. Throughout my career, I've successfully navigated the NPI lifecycle—from whiteboard conceptualization through R&D prototyping, intellectual property securing, to mass production scaling.
+    </p>
+
+    <div class="section">
+        <h2>Water Treatment & Filtering Technology</h2>
+        <div class="meta">
+            <span>Patent I909845</span>
+            <span>Patent M676719</span>
+            <span>Patent M658218</span>
+        </div>
+        <div class="problem-solution">
+            <div>
+                <h3>🔴 The Problem</h3>
+                <p>Traditional water filtering modules suffered from uneven flow distribution and rapid filter degradation, causing significant maintenance downtime in industrial applications.</p>
+            </div>
+            <div>
+                <h3>🟢 The Solution</h3>
+                <p>Engineered a multi-stage hydrodynamic filter core with optimized fluid pathways. Reduced internal pressure drop by 15% and extended component lifecycle through structural redesign. Successfully transitioned design to injection molding mass production.</p>
+            </div>
+        </div>
+        <div class="gallery">
+            <img src="assets/images/patent_3.png" alt="Patent Diagram 1" onerror="this.style.display='none'">
+            <img src="assets/images/patent_4.png" alt="Patent Diagram 2" onerror="this.style.display='none'">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Amphibious Vehicle Suspension System</h2>
+        <div class="meta">
+            <span>Patent I592319</span>
+        </div>
+        <div class="problem-solution">
+            <div>
+                <h3>🔴 The Problem</h3>
+                <p>Military and commercial amphibious marine vehicles face extreme shock loads when transitioning between terrestrial and aquatic environments, risking drivetrain failure.</p>
+            </div>
+            <div>
+                <h3>🟢 The Solution</h3>
+                <p>Developed a dual-redundant suspension and track module that dynamically absorbs hydrodynamic shocks. Led the engineering team through rigorous FEA simulations and physical field testing to validate extreme-load structural integrity.</p>
+            </div>
+        </div>
+        <div class="gallery">
+            <img src="assets/images/patent_1.png" alt="Suspension Patent Diagram 1" onerror="this.style.display='none'">
+            <img src="assets/images/patent_2.png" alt="Suspension Patent Diagram 2" onerror="this.style.display='none'">
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
