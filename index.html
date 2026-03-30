@@ -4,38 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ting-Yu (Johan) Lu | Engineering Portfolio</title>
+    <meta name="description" content="Engineering portfolio of Johan Lu — 14 years in hardware R&D, cleantech, and offshore engineering. 5 patents. Relocating to Stockholm Aug 2026.">
+    <meta property="og:title" content="Johan Lu — Engineering Portfolio">
+    <meta property="og:description" content="Mechanical engineer with 14 years of experience. 5 patents in fluid systems, vehicle suspension, and UAV mechanisms. Relocating to Stockholm.">
+    <meta property="og:type" content="website">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style.css">
+    <!-- <link rel="stylesheet" href="assets/style.css"> -->
     <style>
-        /* Modern Dark Mode & Glassmorphism UI */
+        /* Scandinavian Minimalist Light Theme */
         :root {
-            --bg-dark: #0f172a;
-            --card-glass: rgba(30, 41, 59, 0.7);
-            --card-border: rgba(255, 255, 255, 0.1);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent: #38bdf8;
-            --accent-hover: #0284c7;
-            --success: #10b981;
-            --glass-blur: blur(16px);
+            --bg-light: #ffffff;
+            --bg-secondary: #fafafa;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --success: #065f46;
+            --success-bg: #ecfdf5;
+            --card-border: #e5e7eb;
+            --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-dark);
+            background-color: var(--bg-light);
             color: var(--text-main);
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-image: radial-gradient(circle at top right, rgba(56, 189, 248, 0.15), transparent 40%),
-                              radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.1), transparent 40%);
-            background-attachment: fixed;
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
 
         h1 {
@@ -43,6 +45,7 @@
             font-weight: 700;
             margin-bottom: 5px;
             letter-spacing: -0.02em;
+            color: #1a1a2e;
         }
 
         .subtitle {
@@ -60,7 +63,7 @@
         }
 
         .badge {
-            background: rgba(255,255,255,0.05);
+            background: #f3f4f6;
             border: 1px solid var(--card-border);
             padding: 8px 16px;
             border-radius: 20px;
@@ -68,12 +71,13 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            backdrop-filter: var(--glass-blur);
+            color: var(--text-main);
         }
 
         .badge.visa {
             color: var(--success);
-            border-color: rgba(16, 185, 129, 0.3);
+            background: var(--success-bg);
+            border-color: #d1fae5;
         }
 
         /* Portfolio Cards */
@@ -84,35 +88,21 @@
         }
 
         .card {
-            background: var(--card-glass);
+            background: var(--bg-light);
             border: 1px solid var(--card-border);
             border-radius: 16px;
             padding: 30px;
             text-decoration: none;
             color: var(--text-main);
-            backdrop-filter: var(--glass-blur);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
             position: relative;
             overflow: hidden;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 4px;
-            background: linear-gradient(90deg, var(--accent), transparent);
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            box-shadow: var(--card-shadow);
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            border-color: rgba(255,255,255,0.2);
-        }
-
-        .card:hover::before {
-            opacity: 1;
+            border-color: var(--accent);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
         }
 
         .card h2 {
@@ -138,12 +128,13 @@
 
         .tag {
             font-size: 0.8rem;
-            background: rgba(56, 189, 248, 0.1);
+            background: #eff6ff;
             color: var(--accent);
             padding: 4px 10px;
             border-radius: 12px;
+            border: 1px solid #bfdbfe;
         }
-        
+
         .footer {
             margin-top: 60px;
             text-align: center;
@@ -164,7 +155,7 @@
             font-weight: 600;
             transition: background 0.3s;
         }
-        
+
         .download-btn:hover {
             background: var(--accent-hover);
         }
@@ -188,17 +179,17 @@
         </div>
     </div>
 
-    <p style="font-size: 1.1rem; color: #cbd5e1; max-width: 800px;">
-        14 years of experience as an engineering leader bridging design, prototyping, and high-volume manufacturing. 
-        Holding <strong>5 recognized patents</strong>. Specialized in navigating complex multi-disciplinary hardware systems, 
-        cleantech, and offshore integrations.
+    <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 800px;">
+        Mechanical engineer with 14 years of experience across hardware product development, prototyping, and production scaling.
+        5 granted patents in fluid systems, vehicle suspension, and UAV mechanisms.
+        Background in cleantech, offshore marine engineering, and cross-functional team coordination.
     </p>
 
     <div class="grid">
         <!-- Card 1 -->
         <a href="01_Patents_and_Inventions.html" class="card">
-            <h2>💡 Patents & Fluid Systems Innovations</h2>
-            <p>End-to-end NPI experience from white-board concepts to patented hardware. Featuring water treatment systems, suspension modules, and fluid dynamics.</p>
+            <h2>💡 Patents & Fluid Systems</h2>
+            <p>From concept to granted patent: water treatment aeration systems, amphibious vehicle suspension, and filtration modules. Includes NPI lifecycle documentation.</p>
             <div class="tags">
                 <span class="tag">5 Patents</span>
                 <span class="tag">DFM / NPI</span>
@@ -208,8 +199,8 @@
 
         <!-- Card 2 -->
         <a href="02_R&D_and_Engineering.html" class="card">
-            <h2>🌊 Offshore & Prototyping Engineering</h2>
-            <p>Advanced structural FEA for offshore wind components, cross-functional commercial hardware development (CATFI, BISTRO), and marine engineering integrations.</p>
+            <h2>🌊 Offshore & Hardware Prototyping</h2>
+            <p>Structural FEA for offshore wind seafastening (DNV/GL), commercial hardware product development (CATFI, BISTRO), and industrial water treatment deployment.</p>
             <div class="tags">
                 <span class="tag">Offshore Wind</span>
                 <span class="tag">FEA Simulation</span>
@@ -219,8 +210,8 @@
 
         <!-- Card 3 -->
         <a href="03_STEM_Mentorship.html" class="card">
-            <h2>🚀 STEM Leadership & Systems Engineering Coaching</h2>
-            <p>Guiding high school rocketry teams in complex avionics design and empowering 200+ students through structured Maker education and data-driven analysis methodologies.</p>
+            <h2>🚀 STEM Education & Technical Mentorship</h2>
+            <p>11 years mentoring high school students in science fairs and national rocketry competitions. Coached teams through avionics integration, FMEA, and systems engineering practices.</p>
             <div class="tags">
                 <span class="tag">Systems Engineering</span>
                 <span class="tag">Cross-functional Leadership</span>
@@ -230,20 +221,21 @@
 
         <!-- Card 4 -->
         <a href="04_Digital_and_AI_Skills.html" class="card">
-            <h2>💻 AI Tools & Digital Engineering</h2>
-            <p>Leveraging AI-assisted coding, Python automation, and modern full-stack development to accelerate R&D cycles and build complex data analysis systems.</p>
+            <h2>💻 Software & Data Tools</h2>
+            <p>Python automation, full-stack web development (Next.js / PostgreSQL), and data analysis pipelines built to support engineering and education workflows.</p>
             <div class="tags">
-                <span class="tag">AI Integration</span>
-                <span class="tag">Python Automation</span>
-                <span class="tag">Full-Stack Dev</span>
+                <span class="tag">Python</span>
+                <span class="tag">Next.js / PostgreSQL</span>
+                <span class="tag">Data Analysis</span>
             </div>
         </a>
     </div>
 
-    <a href="assets/Johan_Lu_CV.pdf" target="_blank" class="download-btn">📥 Download Full CV (PDF)</a>
+    <!-- CV PDF button: re-enable once Johan_Lu_CV.pdf is placed in assets/ -->
+    <!--<a href="assets/Johan_Lu_CV.pdf" target="_blank" class="download-btn">Download Full CV (PDF)</a>-->
 
     <div class="footer">
-        © 2026 Johan Lu. Engineered for the Swedish Tech Industry.
+        © 2026 Ting-Yu (Johan) Lu
     </div>
 </div>
 

@@ -4,29 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STEM Leadership | Johan Lu</title>
+    <meta name="description" content="11 years of STEM mentorship: national rocketry competitions, 14+ science fair projects, and systems engineering coaching for high school students.">
+    <meta property="og:title" content="Johan Lu — STEM Education & Mentorship">
+    <meta property="og:description" content="Coaching rocketry teams and science fair projects with industry-standard systems engineering methods.">
+    <meta property="og:type" content="website">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #0f172a;
-            --card-glass: rgba(30, 41, 59, 0.7);
-            --card-border: rgba(255, 255, 255, 0.1);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent: #10b981; /* Green accent for education */
+            --bg-light: #ffffff;
+            --bg-secondary: #fafafa;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --accent: #059669; /* Muted green accent for education */
+            --card-border: #e5e7eb;
+            --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
         }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-dark);
+            background-color: var(--bg-light);
             color: var(--text-main);
             line-height: 1.6;
             margin: 0; padding: 0;
-            background-image: radial-gradient(circle at top right, rgba(16, 185, 129, 0.05), transparent 40%);
         }
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
         .back-link { color: var(--accent); text-decoration: none; display: inline-block; margin-bottom: 20px; font-weight: 600; }
         .back-link:hover { text-decoration: underline; }
-        h1 { font-size: 2.5rem; margin-bottom: 10px; color: #fff; }
-        
+        h1 { font-size: 2.5rem; margin-bottom: 10px; color: #1a1a2e; }
+
         .impact-stats {
             display: flex;
             gap: 20px;
@@ -34,8 +38,8 @@
             flex-wrap: wrap;
         }
         .stat-box {
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.2);
+            background: #ecfdf5;
+            border: 1px solid #d1fae5;
             padding: 20px;
             border-radius: 12px;
             flex: 1;
@@ -46,15 +50,15 @@
         .stat-label { font-size: 0.9rem; color: var(--text-muted); margin-top: 10px; }
 
         .section {
-            background: var(--card-glass);
+            background: var(--bg-light);
             border: 1px solid var(--card-border);
             border-radius: 16px;
             padding: 30px;
             margin-top: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: var(--card-shadow);
         }
         .section h2 { color: var(--accent); margin-top: 0; }
-        
+
         .gallery {
             /* Fallback to CSS column layout for mosaic look */
             column-count: 2;
@@ -73,36 +77,35 @@
             .gallery { column-count: 1; }
         }
         .gallery img:hover { transform: scale(1.02); }
-        </style>
     </style>
 </head>
 <body>
 
 <div class="container">
     <a href="index.html" class="back-link">← Back to Home</a>
-    <h1>STEM Leadership & Systems Coaching</h1>
-    <p style="color: var(--text-muted); font-size: 1.1rem;">
-        Applying aerospace systems engineering and agile methodologies to education. I bridge the gap between textbook theory and real-world hardware innovation, empowering the next generation of engineers.
+    <h1>STEM Education & Technical Mentorship</h1>
+    <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 800px;">
+        Since 2016, I have been mentoring high school students in competitive STEM projects — applying structured systems engineering methods (FMEA, test-driven design) to science fairs and national rocketry competitions.
     </p>
 
     <div class="impact-stats">
         <div class="stat-box">
-            <div class="stat-num">200+</div>
-            <div class="stat-label">Students Mentored Annually</div>
+            <div class="stat-num">11</div>
+            <div class="stat-label">Years of Continuous Mentoring</div>
         </div>
         <div class="stat-box">
-            <div class="stat-num">$200K</div>
-            <div class="stat-label">Lab Apparatus Upgraded</div>
+            <div class="stat-num">120+</div>
+            <div class="stat-label">Students per Year</div>
         </div>
         <div class="stat-box">
-            <div class="stat-num">100%</div>
-            <div class="stat-label">Project Completion Rate</div>
+            <div class="stat-num">14+</div>
+            <div class="stat-label">Science Fair Projects Supervised</div>
         </div>
     </div>
 
     <div class="section">
-        <h2>Aerospace Systems Integration (Rocketry)</h2>
-        <p>Mentored high school competitive teams in the structural and avionic design of amateur rocketry. Guided students through the complexities of payload integration, custom PCB layout with Teensy microcontrollers, sensor fusion (IMU/Barometer), and telemetry data recovery.</p>
+        <h2>National Rocketry Competitions (2025–2026)</h2>
+        <p>Technical mentor for two high school teams in the TASA Taiwan Cup Rocket Competition. Guided students through payload integration, custom PCB layout (Teensy microcontrollers), sensor fusion (IMU/barometer), LoRa telemetry, and parachute deployment systems. Expert reviewers noted the teams' work as <em>"exceeding typical high school maturity"</em> with <em>"FMEA at practically applicable level."</em></p>
         
         <div class="gallery">
             <img src="assets/images/rocket_1.png" alt="Rocket bodies at Taiwan Cup Rocket Competition" onerror="this.style.display='none'">
@@ -113,9 +116,9 @@
     </div>
 
     <div class="section">
-        <h2>Cross-Functional Team Management & QC Training</h2>
-        <p>Adopted industry-standard <strong>Agile/Scrum</strong> methodologies to lead <strong>cross-functional student teams (groups of 10-15)</strong> through full 18-month engineering lifecycles. Directly coached <strong>60+ students</strong> across multiple elite rocket teams, translating high-level aerospace requirements into actionable assembly steps.</p>
-        <p>Enforced strict <strong>Quality Control</strong> by teaching FMEA risk assessments, comprehensive SOP writing, and rigorous documentation. This structured technician-style training directly resulted in teams reaching the <strong>National Science Fair Finals</strong> and ensured safe, reproducible hardware integrations.</p>
+        <h2>Team Coordination & Quality Practices</h2>
+        <p>Coordinated student teams of 10–15 members through 18-month project cycles, using structured task management and milestone tracking. Coached 60+ students across multiple rocketry teams, breaking down aerospace requirements into clear assembly and testing steps.</p>
+        <p>Introduced FMEA risk assessment, SOP documentation, and systematic QC practices into the student workflow. Teams produced work that external reviewers described as having <em>"large-scale project collaboration level"</em> operational maturity.</p>
         
         <div class="gallery" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
             <img src="assets/images/team_management_1.jpg" alt="Students iteratively assembling the rocket body in a hardware lab" onclick="openModal(this)" onerror="this.style.display='none'" style="margin-bottom: 0;">
@@ -126,6 +129,22 @@
     </div>
 
 </div>
+
+<!-- Lightbox Modal -->
+<div id="imageModal" style="display:none; position:fixed; z-index:999; padding-top:50px; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.4);" onclick="closeModal()">
+    <span style="position:absolute; top:15px; right:35px; color:#333333; font-size:40px; font-weight:bold; cursor:pointer;">&times;</span>
+    <img id="modalImg" style="margin:auto; display:block; max-height:85vh; max-width:90vw; object-fit:contain; border-radius:8px; box-shadow:0 10px 40px rgba(0,0,0,0.3);">
+</div>
+
+<script>
+function openModal(imgElement) {
+    document.getElementById("imageModal").style.display = "block";
+    document.getElementById("modalImg").src = imgElement.src;
+}
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
+</script>
 
 </body>
 </html>

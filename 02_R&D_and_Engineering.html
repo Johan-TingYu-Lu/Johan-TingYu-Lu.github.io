@@ -4,38 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offshore & Prototyping | Johan Lu</title>
+    <meta name="description" content="Offshore wind FEA, commercial hardware prototyping (BISTRO/CATFI), and industrial water treatment deployment projects.">
+    <meta property="og:title" content="Johan Lu — Offshore & Hardware Engineering">
+    <meta property="og:description" content="Structural FEA for offshore wind, hardware product development, and water treatment system deployment.">
+    <meta property="og:type" content="website">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #0f172a;
-            --card-glass: rgba(30, 41, 59, 0.7);
-            --card-border: rgba(255, 255, 255, 0.1);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent: #38bdf8;
+            --bg-light: #ffffff;
+            --bg-secondary: #fafafa;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --accent: #2563eb;
+            --card-border: #e5e7eb;
+            --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
         }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-dark);
+            background-color: var(--bg-light);
             color: var(--text-main);
             line-height: 1.6;
             margin: 0; padding: 0;
-            background-image: radial-gradient(circle at top left, rgba(56, 189, 248, 0.05), transparent 40%);
         }
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
         .back-link { color: var(--accent); text-decoration: none; display: inline-block; margin-bottom: 20px; font-weight: 600; }
         .back-link:hover { text-decoration: underline; }
-        h1 { font-size: 2.5rem; margin-bottom: 10px; color: #fff; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; color: #1a1a2e; }
         .section {
-            background: var(--card-glass);
+            background: var(--bg-light);
             border: 1px solid var(--card-border);
             border-radius: 16px;
             padding: 30px;
             margin-top: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: var(--card-shadow);
         }
         .section h2 { color: var(--accent); margin-top: 0; }
-        
+
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -56,12 +60,13 @@
             grid-template-columns: 1fr 1fr;
             gap: 20px;
             margin-top: 20px;
-            background: rgba(0,0,0,0.2);
+            background: var(--bg-secondary);
             padding: 20px;
             border-radius: 8px;
+            border: 1px solid var(--card-border);
         }
-        .problem-solution h3 { margin-top: 0; font-size: 1.1rem; color: #cbd5e1; }
-        
+        .problem-solution h3 { margin-top: 0; font-size: 1.1rem; color: var(--accent); }
+
         @media (max-width: 600px) {
             .problem-solution { grid-template-columns: 1fr; }
         }
@@ -72,22 +77,21 @@
 <div class="container">
     <a href="index.html" class="back-link">← Back to Home</a>
     <h1>Offshore & Prototyping Engineering</h1>
-    <p style="color: var(--text-muted); font-size: 1.1rem;">
-        From the harsh environments of the North Sea to the precision required for commercial hardware prototyping, 
-        I excel at bridging the gap between theoretical calculations and physical deployment.
+    <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 800px;">
+        Selected projects spanning offshore wind structural engineering, commercial hardware product development, and industrial water treatment system deployment.
     </p>
 
     <div class="section">
         <h2>BISTRO Automated Feeding Platform</h2>
-        <p style="color: var(--text-muted); margin-top: -10px;">End-to-end commercial hardware product development</p>
+        <p style="color: var(--text-muted); margin-top: -10px; margin-bottom: 20px;">End-to-end commercial hardware product development</p>
         <div class="problem-solution">
             <div>
                 <h3>🔴 Engineering Challenge</h3>
-                <p>Developing a stable, high-precision automated hardware system capable of continuous operation in variable domestic environments while maintaining aesthetic commercial appeal.</p>
+                <p>Developing a reliable automated feeding system for continuous domestic operation, requiring mechanical stability, food-safe material selection, and compact form factor.</p>
             </div>
             <div>
                 <h3>🟢 Technical Execution</h3>
-                <p>Led mechanical layout, structural stability analysis, and rapid prototyping iterations. Directed cross-functional integration of custom PCB electronics with injection-molded chassis components.</p>
+                <p>Contributed mechanical layout, structural stability analysis (CG validation), and prototyping iterations. Coordinated integration of custom PCB electronics with injection-molded chassis components across a cross-functional team.</p>
             </div>
         </div>
         <div class="gallery">
@@ -98,15 +102,15 @@
 
     <div class="section">
         <h2>Offshore Wind Seafastening Engineering</h2>
-        <p style="color: var(--text-muted); margin-top: -10px;">Subsea structural integrity and harsh weather survivability</p>
+        <p style="color: var(--text-muted); margin-top: -10px; margin-bottom: 20px;">Subsea structural integrity and harsh weather survivability</p>
         <div class="problem-solution">
             <div>
                 <h3>🔴 Engineering Challenge</h3>
-                <p>Transporting multi-ton offshore wind components on vessels in extreme ocean conditions requires robust, fail-safe seafastening structures that adhere to strict maritime class regulations (e.g., DNV).</p>
+                <p>Transporting multi-ton offshore wind components on vessels requires seafastening structures that meet maritime classification standards (DNV/GL) under dynamic wave loading conditions.</p>
             </div>
             <div>
                 <h3>🟢 Technical Execution</h3>
-                <p>Executed sophisticated Finite Element Analysis (FEA) on complex jacket and pin-pile securing jigs. Validated stress nodes against dynamic wave load scenarios, ensuring zero equipment loss during maritime transit operations.</p>
+                <p>Performed Finite Element Analysis (MSC/NASTRAN, ABAQUS) on jacket and pin-pile securing jigs. Validated structural integrity against dynamic wave load scenarios per DNV/GL classification standards. Published findings at the 28th CSNAME conference (2016).</p>
             </div>
         </div>
         <div class="gallery">
@@ -117,7 +121,7 @@
 
     <div class="section">
         <h2>Water Treatment System Prototyping & Field Engineering</h2>
-        <p style="color: var(--text-muted); margin-top: -10px;">Full-scale industrial deployment and hardware troubleshooting</p>
+        <p style="color: var(--text-muted); margin-top: -10px; margin-bottom: 20px;">Full-scale industrial deployment and hardware troubleshooting</p>
         <div class="problem-solution">
             <div>
                 <h3>🔴 Engineering Challenge</h3>
@@ -125,7 +129,7 @@
             </div>
             <div>
                 <h3>🟢 Technical Execution</h3>
-                <p>Led hands-on field troubleshooting and root cause analysis in active aquatic environments. Iteratively adjusted submerged piping geometry, mitigated vibration through structural dampening, and optimized the pumping flow rates to achieve stable, uniform aeration.</p>
+                <p>Conducted on-site troubleshooting and root cause analysis in operating aquaculture facilities. Adjusted submerged piping geometry, addressed vibration through structural dampening, and tuned pumping flow rates to achieve uniform aeration distribution.</p>
             </div>
         </div>
         <div class="gallery" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
@@ -134,6 +138,16 @@
             <img src="assets/images/water_system_3.jpg" alt="In-situ troubleshooting and flow adjustments in an active aquatic environment" onclick="openModal(this)" onerror="this.style.display='none'" style="cursor: pointer; margin-bottom: 0;">
             <img src="assets/images/water_system_4.jpg" alt="Final automated aerator units successfully integrated into the tank infrastructure" onclick="openModal(this)" onerror="this.style.display='none'" style="cursor: pointer; margin-bottom: 0;">
         </div>
+    </div>
+
+    <div class="section">
+        <h2>UAV Systems Engineering & Academic Research</h2>
+        <p style="color: var(--text-muted); margin-top: -10px;">Unmanned Ultra-Light (UUL) mechanism design and hydraulic actuation</p>
+        <p>
+            Authored peer-reviewed research published in the <strong>Journal of Aeronautics, Astronautics and Aviation</strong> (Vol. 46, No. 2, 2014): <em>"System Reengineering in Mechanism Design and Implementation for Unmanned Ultra-Light (Part I)"</em>.
+            <br><br>
+            Led the system design implementation and hydraulic actuation restructuring for unmanned aerial vehicles (UAV), demonstrating early expertise in complex aerospace mechanics and systems engineering.
+        </p>
     </div>
 
 </div>
@@ -149,19 +163,18 @@
 .modal {
     display: none; position: fixed; z-index: 999; padding-top: 50px;
     left: 0; top: 0; width: 100%; height: 100%; overflow: auto;
-    background-color: rgba(15, 23, 42, 0.95);
-    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 .modal-content {
     margin: auto; display: block; max-height: 85vh; max-width: 90vw;
     object-fit: contain; border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
 }
 .close {
-    position: absolute; top: 15px; right: 35px; color: #f8fafc;
+    position: absolute; top: 15px; right: 35px; color: #333333;
     font-size: 40px; font-weight: bold; cursor: pointer; transition: color 0.2s;
 }
-.close:hover { color: #38bdf8; }
+.close:hover { color: #2563eb; }
 </style>
 
 <script>
