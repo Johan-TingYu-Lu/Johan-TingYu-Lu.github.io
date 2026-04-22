@@ -71,8 +71,37 @@
         }
         .problem-solution h3 { margin-top: 0; font-size: 1.1rem; color: var(--accent); }
 
+        .field-test {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .field-test video, .field-test img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+            background: #000;
+            display: block;
+        }
+        .field-test-caption {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+        .subhead {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
         @media (max-width: 600px) {
             .problem-solution { grid-template-columns: 1fr; }
+            .field-test { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -144,6 +173,23 @@
                 <p>Co-invented a modular unmanned control device for ultra-light vehicles: a microprocessor-coordinated actuation system using hydraulic cylinders and LVDT position feedback to drive six independent control surfaces. The system receives ground-station commands via RF link, computes actuator signals, and enables full remote flight control — converting any compatible ultra-light airframe into a high-payload UAV platform.</p>
             </div>
         </div>
+
+        <h3 class="subhead">Field Deployment & Flight Test</h3>
+        <div class="field-test">
+            <div>
+                <video controls preload="metadata" poster="assets/images/uav_field_test.jpg">
+                    <source src="assets/videos/uav_flight_test.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <p class="field-test-caption">Flight test — remote-controlled ultralight UAV prototype in operation.</p>
+            </div>
+            <div>
+                <img src="assets/images/uav_field_test.jpg" alt="Engineering team mounting the hydraulic actuator frame to the ultralight airframe at the airfield" onerror="this.style.display='none'">
+                <p class="field-test-caption">Pre-flight assembly: actuator frame, on-board power, and control electronics mounted on the ultralight airframe.</p>
+            </div>
+        </div>
+
+        <h3 class="subhead">Mechanism Design</h3>
         <div class="gallery">
             <img src="assets/images/uav_patent_mechanism.png" alt="Assembled rudder gear-rack mechanism with hydraulic actuation" onerror="this.style.display='none'">
             <img src="assets/images/uav_patent_optimization.png" alt="Topology-optimized mounting plate — 40% weight reduction via Wire EDM" onerror="this.style.display='none'">
